@@ -18,8 +18,10 @@ export const signin = (req, res, next) => {
 export const signup = (req, res, next) => {
   const email = req.body.email;
   const password = req.body.password;
+  const username = req.body.username;
 
-  if (!email || !password) {
+
+  if (!email || !password || !username) {
     return res.status(422).send('You must provide email and password');
   }
 
@@ -32,6 +34,7 @@ export const signup = (req, res, next) => {
     const user = new User();
     user.email = req.body.email;
     user.password = req.body.password;
+    user.username = username;
     user.save()
       .then((result) => {
         res.send({ token: tokenForUser(user) });

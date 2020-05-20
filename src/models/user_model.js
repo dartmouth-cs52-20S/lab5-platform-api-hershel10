@@ -4,6 +4,7 @@ import bcrypt from 'bcryptjs';
 const UserSchema = new Schema({
   email: { type: String, unique: true, lowercase: true },
   password: { type: String },
+  username: { type: String, unique: true, lowercase: true },
 }, {
   toObject: { virtuals: true },
   toJSON: { virtuals: true },
