@@ -7,6 +7,7 @@ export const createPost = (req, res) => {
   p.tags = req.body.tags;
   p.content = req.body.content;
   p.coverUrl = req.body.coverUrl;
+  p.author = req.user._id;
   p.save()
     .then((result) => {
       res.json('Created Post!');
