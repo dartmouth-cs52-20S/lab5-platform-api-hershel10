@@ -5,6 +5,3 @@ This lab was cool i struggled most creating post_controller. Using promises was 
 
 No Extra Credit - next time maybe
 
-# Lab 5 part 2
-
-This part was fine. It was basically a short assignment. Just went through the instructions and it worked. Nice Nice on to the frontend.
